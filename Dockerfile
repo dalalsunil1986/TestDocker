@@ -11,6 +11,8 @@ USER node
 
 COPY package.json package-lock.json* ./
 
+CMD ["npm", "config set strict-ssl false"]
+
 RUN npm install --no-optional && npm cache clean --force
 
 COPY . .
