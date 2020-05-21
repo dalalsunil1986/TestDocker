@@ -6,8 +6,6 @@ services:
       - 80:80
   app:
     build: .
-        network: host
-
     volumes:
       - ./public:/opt/app/public
       - ./routes:/opt/app/routes
